@@ -1,0 +1,93 @@
+﻿
+@{
+                /**/
+
+                ViewBag.Title = "Register";
+}
+
+<h2>Register</h2>
+
+
+@model lab21.Models.RegisterClass
+@Styles.Render("~/Content/Site")
+
+@*HEY! the above code, that we worked in class, also works to post info and has much stronger validation, i think, maybe.  It does not have the fancy datetime calendar thing
+ which makes me want to stick with the html forms, even tho the validation isn't as rigorous*@
+@*<style>
+    .error {
+        color: red;
+    }
+</style>
+<h2>Additonal</h2>
+@using (Html.BeginForm("Register", "Home", FormMethod.Post))
+
+
+{
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4">
+                <h3>Please Enter First Name </h3>
+
+                @Html.ValueFor(x => x.FirstName)
+                @Html.TextBoxFor(x => x.FirstName)
+                @Html.ValidationMessageFor(x => x.FirstName, "", new { @class = "error" })
+
+                <p></p>
+                <p>Enter Your Age</p>
+            </div>
+            <div class="col-sm-4">
+                <h3>Last Name</h3>
+                @Html.ValueFor(x => x.LastName)
+                @Html.TextBoxFor(x => x.LastName)
+                @Html.ValidationMessageFor(x => x.LastName, "", new { @class = "error" })
+
+                <p></p>
+                <p>Enter A Brief Description Please</p>
+            </div>
+            <div class="col-sm-4">
+                <h3>Email </h3>
+                @Html.ValueFor(x => x.Email)
+                @Html.TextBoxFor(x => x.Email)
+                @Html.ValidationMessageFor(x => x.Email, "", new { @class = "error" })
+
+
+
+            </div>
+            <div class="col-sm-4">
+                <h3>Phone Number </h3>
+                @Html.ValueFor(x => x.PhoneNumber)
+                @Html.TextBoxFor(x => x.PhoneNumber)
+                @Html.ValidationMessageFor(x => x.PhoneNumber, "", new { @class = "error" })*
+
+            </div>
+        </div>
+    </div>
+    <button type="submit" class="col-lg-4">Submit</button>
+}*@
+
+<h2>Create</h2>
+<form action="/Home/Register" method="post">
+
+    <input type="text" name="Email" placeholder="Email"  required/><br />
+    
+    <input type="text" name="LastName" placeholder="Last Name" required/><br />
+    <input type="Text" name="FirstName" placeholder="First Name" required/><br />
+    <input type="Text" name="Phone Number" placeholder="Phone Number" required/><br />
+
+    Date of Birth <input type="date" name="Birthday" required /><br />
+
+    <input type="submit" class="btn-group" value="Register" /><br />
+
+
+</form>
+
+@if (ViewBag.Error != null)
+{
+    <p>@ViewBag.Error</p>
+}
+
+
+@section Scripts{
+    @Scripts.Render("~/bundles/jqueryval")}
+
