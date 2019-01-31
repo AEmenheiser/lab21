@@ -9,37 +9,32 @@ namespace lab21.Controllers
 {
     public class HomeController : Controller
     {
+        
         public ActionResult Index()
         {
             return View();
         }
 
+
+
+        [HttpGet]
         public ActionResult Register()
         {
+            var user = new RegisterClass();
+
+            if (ModelState.IsValid)
+            {
+
+                return View(user);
+            }
+            
             return View();
         }
 
         [HttpPost]
-        public ActionResult Register(RegisterClass NewPerson)
+        public ActionResult Success(RegisterClass user)
         {
-
-            if (ModelState.IsValid)
-            {
-                ViewBag.Name = $"Thanks for signing up {NewPerson.FirstName} {NewPerson.LastName}!!!";
-                return View("Success");
-            }
-            else
-            {
-                ViewBag.Error = "Oops! Try Again!";
-                return View();
-            }
-
-           
-        }
-
-        public ActionResult Success()
-        {
-            return View();
+            return View(user);
         }
     }
 }

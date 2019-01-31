@@ -2,3 +2,16 @@
 <h2>Success!!</h2>
 
 <p>@ViewBag.Name</p>
+@using lab21.Models
+
+@model RegisterClass
+
+@if (Model != null)
+{
+    <p>Welcome @Model.FirstName @Model.LastName!!</p>
+
+}
+else
+{
+    <p>Something Went Wrong!</p>
+}

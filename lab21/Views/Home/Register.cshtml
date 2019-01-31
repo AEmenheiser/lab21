@@ -13,13 +13,15 @@
 
 @*HEY! the above code, that we worked in class, also works to post info and has much stronger validation, i think, maybe.  It does not have the fancy datetime calendar thing
  which makes me want to stick with the html forms, even tho the validation isn't as rigorous*@
-@*<style>
+@*Update: Got the HTTPpost/get to work*@
+<style>
     .error {
         color: red;
     }
 </style>
-<h2>Additonal</h2>
-@using (Html.BeginForm("Register", "Home", FormMethod.Post))
+
+
+@using (Html.BeginForm("Success", "Home", FormMethod.Post))
 
 
 {
@@ -58,15 +60,17 @@
                 <h3>Phone Number </h3>
                 @Html.ValueFor(x => x.PhoneNumber)
                 @Html.TextBoxFor(x => x.PhoneNumber)
-                @Html.ValidationMessageFor(x => x.PhoneNumber, "", new { @class = "error" })*
+                @Html.ValidationMessageFor(x => x.PhoneNumber, "", new { @class = "error" })
+
 
             </div>
+           
         </div>
     </div>
     <button type="submit" class="col-lg-4">Submit</button>
-}*@
+}
 
-<h2>Create</h2>
+@*<h2>Create</h2>
 <form action="/Home/Register" method="post">
 
     <input type="text" name="Email" placeholder="Email"  required/><br />
@@ -80,12 +84,9 @@
     <input type="submit" class="btn-group" value="Register" /><br />
 
 
-</form>
+</form>*@
 
-@if (ViewBag.Error != null)
-{
-    <p>@ViewBag.Error</p>
-}
+
 
 
 @section Scripts{
