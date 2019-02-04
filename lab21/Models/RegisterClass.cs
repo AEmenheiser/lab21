@@ -11,7 +11,7 @@ namespace lab21.Models
     public class RegisterClass
     {
 
-        [Key]
+        
         public int ID { get; set; }
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         //I dont think this level of validation will work with the html form, tho I could (probably) be wrong.

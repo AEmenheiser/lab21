@@ -14,8 +14,8 @@ namespace lab21.DAL
         {
             var customer = new List<RegisterClass>
             {
-                new RegisterClass{ID=0,FirstName="Adam", LastName = "Emenheiser", Email="Fakeemail.com", PhoneNumber=123432123,},
-                new RegisterClass{ID=1,FirstName="ben", LastName = "hur", Email="fun.com", PhoneNumber=123432123,}
+                new RegisterClass{FirstName="Adam", LastName = "Emenheiser", Email="Fakeemail.com", PhoneNumber=123432123,},
+                new RegisterClass{FirstName="ben", LastName = "hur", Email="fun.com", PhoneNumber=123432123,}
 
             };
 
@@ -25,7 +25,7 @@ namespace lab21.DAL
 
             var items = new List<ItemClass>
             {
-                new ItemClass{ID=0, Price=1, Description="cofee", Name="small coffee", Quantity=1,}
+                new ItemClass{ID=0, Price=1, Description="coffee", Name="small coffee", Quantity=1,}
             };
 
             items.ForEach(x => context.Item.Add(x));
