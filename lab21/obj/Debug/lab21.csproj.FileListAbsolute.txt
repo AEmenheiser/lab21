@@ -89,3 +89,7 @@ C:\Users\Adam\source\repos\lab21\lab21\obj\Debug\lab21.csproj.CoreCompileInputs.
 C:\Users\Adam\source\repos\lab21\lab21\obj\Debug\lab21.csproj.CopyComplete
 C:\Users\Adam\source\repos\lab21\lab21\obj\Debug\lab21.dll
 C:\Users\Adam\source\repos\lab21\lab21\obj\Debug\lab21.pdb
+C:\Users\Adam\source\repos\lab21\lab21\bin\EntityFramework.dll
+C:\Users\Adam\source\repos\lab21\lab21\bin\EntityFramework.SqlServer.dll
+C:\Users\Adam\source\repos\lab21\lab21\bin\EntityFramework.xml
+C:\Users\Adam\source\repos\lab21\lab21\bin\EntityFramework.SqlServer.xml
