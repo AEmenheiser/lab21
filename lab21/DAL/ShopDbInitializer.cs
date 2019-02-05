@@ -25,7 +25,7 @@ namespace lab21.DAL
 
             var items = new List<ItemClass>
             {
-                new ItemClass{ID=0, Price=1, Description="coffee", Name="small coffee", Quantity=1,}
+                new ItemClass{Price=1, Description="coffee", Name="small coffee", Quantity=1,}
             };
 
             items.ForEach(x => context.Item.Add(x));
